@@ -106,7 +106,7 @@ function gotResults(err, results) {
   let confidence = nf(100 * results[0].confidence, 2, 1);
 
   //Вывод на страницу
-  resultsDiv.html(`${label} ${confidence}%`);
+  resultsDiv.html(`${label} ${confidence}%\n${results[1].label} ${nf(100 * results[1].confidence, 2, 1)}%`);
   boardDiv.html(board);
 
   //Присвоение текущей цифры или символа для дальнейшего возможного выведения на "доску"
